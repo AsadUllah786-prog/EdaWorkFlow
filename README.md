@@ -16,28 +16,8 @@ My aim is to understand what the data is saying, not just memorize Pandas functi
 | [05 — Missing values](notebooks/05_missing_values.ipynb) | Missing percentages, investigation, cautious imputation |
 | [06 — Duplicate analysis](notebooks/06_duplicate_analysis.ipynb) | Exact duplicates, business keys, legitimate repeats |
 
-**Why Level 0–6?** My roadmap starts at Level 0, so that is seven notebooks. Level 7 (standardization and currency cleaning) is the next stage.
 
-## Run locally
 
-```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS / Linux: source .venv/bin/activate
-pip install -r requirements.txt
-jupyter lab
-```
-
-Start Jupyter in this folder, then open the files under `notebooks/`. Each notebook also works when the working directory is `notebooks/`.
-
-## About the data
-
-- `data/sales_raw.csv` — main dataset (565 rows, 15 columns); **fictional** transactions, not real customer data.
-- `data/sales_sample.xlsx` — first 65 rows of the same data (for Excel loading practice).
-- `data/sales_sample.json` — first 30 rows of the same data (for JSON loading practice).
-- `data/data_dictionary.md` — column notes and intentionally added issues.
-
-The raw data purposely includes blank cells, inconsistent city names, percentages saved as strings, an invalid date, a few bad quantity entries, repeated order IDs, exact duplicate records, and conflicting line IDs. The point is to **investigate** those issues rather than automatically delete everything suspicious.
 
 ## What I took from this practice
 
@@ -46,4 +26,4 @@ The raw data purposely includes blank cells, inconsistent city names, percentage
 - Missing values and outliers need context before treatment.
 - A technically clean table can still produce wrong business numbers.
 
-These are learning notebooks; they are not a production ETL pipeline. I plan to continue with Level 7 cleaning/standardization next.
+
